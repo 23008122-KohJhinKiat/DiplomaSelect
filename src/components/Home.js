@@ -6,12 +6,12 @@ export default function Home() {
       <img
         className="img-feat"
         src={featImg}
-        alt="Red30 Tech conference attendees on a laptop"
+        alt="Republic polytechnic conference attendees on a laptop"
       />
 
       <h1>Welcome</h1>
       <p>
-        This is a fictitious company and conference created by{" "}
+        This is a real institution and conference created by{" "}
         <a
           href="https://www.linkedin.com/feed/"
           target="_blank"
