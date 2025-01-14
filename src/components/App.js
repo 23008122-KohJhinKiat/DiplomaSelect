@@ -1,49 +1,31 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-import Categories from "./Categories";
-import Session from "./Session";
-import Header from "./Header";
-import Category from "./Category";
+import Diplomas from "./Diplomas";
+import Diploma from "./Diploma";
+import Course from "./Course";
 import Register from "./Register";
+import Header from "./Header";
 
 function App() {
   return (
     <div className="app">
       <Header />
-      {/* <header className="container">
-        <img
-          className="logo"
-          src={logo}
-          alt="Red30 Tech logo"
-          title="Red30 Tech | Home"
-        />
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/categories">Categories</Link>
-        </nav>
-      </header>  */}
 
       <Routes>
-        <Route path="/" element={<Home title="Welcome to Red30 Tech"></Home>} />
+        <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="categories" element={<Categories />} >
-          <Route path=":catId" element={<Category />} >
-            <Route path = ":sessionId" element={<Session />} />
+        <Route path="diplomas" element={<Diplomas />}>
+          <Route path=":diplomaId" element={<Diploma />}>
+            <Route path=":courseId" element={<Course />} />
           </Route>
-          <Route index element={<h3>Select a category from above</h3>} /> 
-          </Route>   
-          <Route path="register" element={<Register />} />
-          <Route
-        path="*"
-        element={<h1 className="not-found">Page Not Found</h1>}
-        />
+        </Route>
+        <Route path="register" element={<Register />} />
+        <Route path="*" element={<h1 className="not-found">Page Not Found</h1>} />
       </Routes>
-      
 
       <footer className="container">
-        &copy;2022 | <a href="https://red30tech.com/">Red30 Tech</a>
+        &copy;2025 | Republic Polytechnic
       </footer>
     </div>
   );

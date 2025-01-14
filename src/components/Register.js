@@ -3,33 +3,27 @@ import { useRef } from "react";
 
 export default function Register() {
   const navigate = useNavigate();
-  const emailRef = useRef(null);
   const nameRef = useRef(null);
-
+  const emailRef = useRef(null);
 
   function handleSubmit(event) {
     event.preventDefault();
-    navigate("/confirmed", {state: {name: nameRef.current.value, email: emailRef.current.value} });
+    navigate("/diplomas", { state: { name: nameRef.current.value, email: emailRef.current.value } });
   }
 
   return (
     <div className="container">
-      <h1>Register for Red30 Tech</h1>
-      <p>
-        Make sure to grab your spot for this year's conference! We love
-        technology and consistently work towards being the premier provider of
-        technology solutions and events that connect the world.
-      </p>
+      <h1>Register Your Interest</h1>
       <form onSubmit={handleSubmit}>
-      <label>
+        <label>
           Name:
-          <input type="text" name="name" ref={nameRef} />
+          <input type="text" ref={nameRef} required />
         </label>
         <label>
           Email:
-          <input type="text" name="email" ref={emailRef} />
+          <input type="email" ref={emailRef} required />
         </label>
-        <input type="submit" value="Submit" />
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
