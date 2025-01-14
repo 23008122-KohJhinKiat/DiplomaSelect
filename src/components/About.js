@@ -14,7 +14,7 @@ export default function About() {
         work seamlessly with your company, allowing your employees, partners,
         and customers to engage in quality interactions that lead to scalable
         growth. We consistently work towards being the premier provider of
-        environmentally sustainable technology solutions that connect the world.
+        environmentally sustainable technology solutions that connect the world. thanks
       </p>
     </div>
   );
